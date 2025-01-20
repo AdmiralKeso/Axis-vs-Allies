@@ -1,8 +1,6 @@
-//Main menu
+//Music
 var muteButton = document.getElementById('mute-btn');
 var audio = document.getElementById('background-music');
-var startgame = document.getElementById('start');
-var howToPlay = document.getElementById('htp');
 
 audio.play();
 
@@ -15,3 +13,7 @@ muteButton.addEventListener('click', () => {
     muteButton.textContent = '🔇'; // Mute icon
   }
 });
+
+//Gameplay
+var startgame = document.getElementById('start');
+var howToPlay = document.getElementById('htp');
