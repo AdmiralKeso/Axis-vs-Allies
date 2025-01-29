@@ -33,3 +33,19 @@ function createGrid(size) { //Creating a grid using arrays. The arrays will have
   return grid;
 }
 
+function printGrid(grid, isEnemy = false) { //Testing the grid system so it prints in console.
+  const headers = createHeaders(grid.length);
+  console.log(headers);
+  for (let i = 0; i < grid.length; i++) {
+    let rowStr = i + ' ';
+    for (let cell of grid[i]) {
+      if (isEnemy && cell == '0') {
+        rowStr += '- ';
+      } else {
+        rowStr += cell + ' ';
+      }
+    }
+    console.log(rowStr);
+  }
+}
+
