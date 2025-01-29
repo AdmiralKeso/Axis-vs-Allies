@@ -14,6 +14,11 @@ muteButton.addEventListener('click', () => {
   }
 });
 
-//Gameplay
+//Gameplay Variables
 var startgame = document.getElementById('start');
 var howToPlay = document.getElementById('htp');
+var myGridSize = prompt('what size would you like your grid to be?');
+var enemyGridSize = prompt('what size should you like your enemy grid to be?');
+var myGrid = createGrid(myGridSize);
+var enemyGrid = createGrid(enemyGridSize);
+
