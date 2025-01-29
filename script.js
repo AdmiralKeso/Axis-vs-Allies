@@ -17,13 +17,19 @@ muteButton.addEventListener('click', () => {
 //Gameplay Variables
 var startgame = document.getElementById('start');
 var howToPlay = document.getElementById('htp');
-var myGridSize = prompt('what size would you like your grid to be?');
-var enemyGridSize = prompt('what size should you like your enemy grid to be?');
-var myGrid = createGrid(myGridSize);
-var enemyGrid = createGrid(enemyGridSize);
+var myGrid, enemyGrid;
+var myGridSize, enemyGridSize;
 
-printGrid(enemyGrid, true);
-printGrid(myGrid);
+startgame.addEventListener('click', () => {
+  myGridSize = parseInt(prompt('what size should you like your enemy grid to be?'), 10);
+  enemyGridSize = parseInt(prompt('what size should you like your enemy grid to be?'), 10);
+
+  myGrid = createGrid(myGridSize);
+  enemyGrid = createGrid(enemyGridSize);
+
+  printGrid(enemyGrid, true);
+  printGrid(myGrid);
+});
 
 function createGrid(size) { //Creating a grid using arrays. The arrays will have arrays itself meaning it will form a grid.
   let grid = [];
