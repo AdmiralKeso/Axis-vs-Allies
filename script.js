@@ -49,3 +49,10 @@ function printGrid(grid, isEnemy = false) { //Testing the grid system so it prin
   }
 }
 
+function createHeaders(size) { //Labels grid with numbers.
+  let result = '  ';
+  for (let i = 0; i < size; i++) {
+    result += i + ' ';
+  }
+  return result;
+}
